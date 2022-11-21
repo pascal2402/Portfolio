@@ -10,6 +10,9 @@
   margin: auto;
 }
 
+.fixed-width img{
+  width: 1000px;
+}
 body {
   display: flex;
   flex-direction: column;
