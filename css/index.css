@@ -1,0 +1,41 @@
+.banner img{
+  width: 1000px;
+  
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  margin: 50px 50px;
+  text-align: center;
+}
+
+.feature img {
+  height: 80px;
+}
+
+.feature{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.feature-heading {
+  display: grid;
+  grid-template-columns: 35% 50%;
+  align-items: center;
+  justify-items: end;
+}
+
+.feature-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-grow: 1;
+  text-align: right;
+}
+
+.feature-description{
+  text-align: center;
+  margin: auto;
+  width: 60%;
+}
