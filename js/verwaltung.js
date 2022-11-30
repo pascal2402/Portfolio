@@ -19,13 +19,13 @@ function showCounts(counts) {
           </div>
           <div class="list-value-counterstatus">
           <div>
-              <img src="bilder/counter_light.png"/>
+              <img src="img/counter_light.png"/>
           </div>
               <p>${String(counts[0].value).replace(".",",")} kWh</p>
           </div>
           <div class="list-value-diff">
           <div>
-            <img src="bilder/energy-consumption_light.png"/>
+            <img src="img/energy-consumption_light.png"/>
           </div>
           <div>
             <p class="list-value-diff-kWh">
@@ -46,12 +46,12 @@ function showCounts(counts) {
       for (let i = 0; i < counts.length; i++) { // create list entry for every count in count array
           let countHtmlContent = `  
           <div class="list-value-date">
-              <img src="bilder/calendar.png"/>
+              <img src="img/calendar.png"/>
               <p>${formatDate(counts[i].date)}</p>
           </div>
           <div class="list-value-counterstatus">
           <div>
-              <img src="bilder/counter_dark.png"/>
+              <img src="img/counter_dark.png"/>
           </div>
               <p>${String(counts[i].value).replace(".", ",")} kWh</p>
           </div>
@@ -60,7 +60,7 @@ function showCounts(counts) {
           </div>
           </div>
           <div class="list-value-delete">
-              <img src="bilder/delete.png" onclick="deleteCount('${counts[i].id}')"/>
+              <img src="img/delete.png" onclick="deleteCount('${counts[i].id}')"/>
           </div>
       `;
 
@@ -158,7 +158,7 @@ function CalculateDiff(i, counts) {
       return "";
   } else {
       return `<div>
-                  <img src="bilder/energy-consumption_dark.png"/>
+                  <img src="img/energy-consumption_dark.png"/>
               </div>
               <div> 
                   <p class="list-value-diff-kWh">
