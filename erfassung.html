@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/common.css"/>
     <link rel="stylesheet" href="css/erfassung.css"/>
 </head>
-<body onload="initialize()">
+<body>
 <header class="fixed-width">
     <a href="index.html">
         <img src="img/powertrack_logo.png">
@@ -17,7 +17,7 @@
 </header>
 <main class="fixed-width">
     <div class="headline">
-        <h1 id="page-title">Z&auml;hlerst&auml;nde erfassen</h1>
+        <h1>Z&auml;hlerst&auml;nde erfassen</h1>
     </div>
 
     <form>
@@ -35,8 +35,12 @@
     </form>
 
     <div class="action-buttons">
+        <div>
         <a href="verwaltung.html"><button id="cancel-btn">Abbrechen</button></a>
+        </div>
+        <div>
         <a href="verwaltung.html"><button onclick="save()" id="save-btn">Speichern</button></a>
+        </div>
     </div>
 </main>
 

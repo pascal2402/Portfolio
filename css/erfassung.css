@@ -1,3 +1,7 @@
+form input{
+  width:120px;
+}
+
 label {
   font-weight: bold;
 }
@@ -18,5 +22,27 @@ input {
 }
 
 .action-buttons{
-  text-align: center;
+  display:flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#cancel-btn, #save-btn{
+  width:250px;
+}
+
+.action-buttons div{
+  padding:0px 20px;
+}
+
+#cancel-btn{
+  background-color: inherit;
+  color:black;
+}
+
+#cancel-btn:hover{
+    background-color: #EA1F25;
+    border: solid;
+    border-color: black;
+    border-width: 2px;
 }
