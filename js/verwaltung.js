@@ -3,7 +3,7 @@
  */
  function initialize() {
   console.debug("Initializing list page")
-  showCounts(loadStoredCounts());
+  showEntries(loadStoredEntries());
 }
 
 /**
@@ -11,8 +11,8 @@
 *
 * @param counts The counts to show in the count list.
 */
-function showCounts(counts) {
-  if (counts && counts.length !==0) { // if no counts are stored, nothing is displayed
+function showEntries(entries) {
+  if (entries && entries.length !==0) { // if no counts are stored, nothing is displayed
       let firstRow =                  // first row must be created different than the other ones
       `                                                              
           <div class="list-value-date">
