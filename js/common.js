@@ -6,7 +6,7 @@
  function loadStoredEntries() {
   var storedEntriesJson = localStorage.getItem("entries");
   if (storedEntriesJson) {
-      var entries = JSON.parse(storedCountsJson);
+      var entries = JSON.parse(storedEntriesJson);
       console.debug(`Count of loaded entries: ${entries.length}`);
       return entries;
   }

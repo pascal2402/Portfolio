@@ -8,7 +8,7 @@
   const entry = getInputObject();
   console.log(entry);
   insertSorted(entries, entry)
-  storeCounts(entries);
+  storeEntries(entries);
   console.debug('Entry saved');
 }
 
@@ -38,7 +38,7 @@ function getInputObject() {
 */
 function insertSorted(entries, entry) {
   if (entries.length == 0){ 
-    entries.push(count);
+    entries.push(entry);
   }
   else {
     let i = 0;
