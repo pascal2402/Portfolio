@@ -21,7 +21,7 @@ function showEntries(entries) {
           <div>
               <img src="img/counter_light.png"/>
           </div>
-              <p>${String(counts[0].value).replace(".",",")} kWh</p>
+              <p>${String(entries[0].value).replace(".",",")} kWh</p>
           </div>
           <div class="list-value-diff">
           <div>
@@ -29,47 +29,47 @@ function showEntries(entries) {
           </div>
           <div>
             <p class="list-value-diff-kWh">
-            ${String((counts[0].value - counts[counts.length-1].value).toFixed(2)).replace(".", ",")} kWh
+            ${String((entries[0].value - entries[entries.length-1].value).toFixed(2)).replace(".", ",")} kWh
             </p>
             <p class="list-value-diff-period">
-            ${formatDate(counts[counts.length-1].date)}-${formatDate(counts[0].date)}
+            ${formatDate(entries[entries.length-1].date)}-${formatDate(entries[0].date)}
             </p>
           </div>
           </div>
           <div class="list-value-delete">
           </div>
       `
-      let countLi = document.createElement("li");
-      countLi.innerHTML = firstRow
-      appendById("counts", countLi);
+      let entryLi = document.createElement("li");
+      entryLi.innerHTML = firstRow
+      appendById("entries", entryLi);
       
-      for (let i = 0; i < counts.length; i++) { // create list entry for every count in count array
+      for (let i = 0; i < entries.length; i++) { // create list entry for every count in count array
           let countHtmlContent = `  
           <div class="list-value-date">
               <img src="img/calendar.png"/>
-              <p>${formatDate(counts[i].date)}</p>
+              <p>${formatDate(entries[i].date)}</p>
           </div>
           <div class="list-value-counterstatus">
           <div>
               <img src="img/counter_dark.png"/>
           </div>
-              <p>${String(counts[i].value).replace(".", ",")} kWh</p>
+              <p>${String(entries[i].value).replace(".", ",")} kWh</p>
           </div>
           <div class="list-value-diff">
-              ${CalculateDiff(i, counts)}
+              ${CalculateDiff(i, entries)}
           </div>
           </div>
           <div class="list-value-delete">
-              <img src="img/delete.png" onclick="deleteCount('${counts[i].id}')"/>
+              <img src="img/delete.png" onclick="deleteCount('${entries[i].id}')"/>
           </div>
       `;
 
-          countLi = document.createElement("li");
-          countLi.innerHTML = countHtmlContent
-          appendById("counts", countLi);
+          entryLi = document.createElement("li");
+          entryLi.innerHTML = countHtmlContent
+          appendById("entries", entryLi);
       }}
   else {
-      console.error("No counts provided to be shown")
+      console.error("No entries provided to be shown")
   }}
 
 /**
