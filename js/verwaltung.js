@@ -1,5 +1,5 @@
 /**
- * Initialize the page. Will load all counts from the local storage and show them.
+ * Initialize the page. Will load all entries from the local storage and show them.
  */
  function initialize() {
   console.debug("Initializing list page")
@@ -7,12 +7,12 @@
 }
 
 /**
-* Display the given counts in the count list.
+* Display the given entries in the entry list.
 *
-* @param counts The counts to show in the count list.
+* @param entries The entries to show in the entry list.
 */
 function showEntries(entries) {
-  if (entries && entries.length !==0) { // if no counts are stored, nothing is displayed
+  if (entries && entries.length !==0) { // if no entries are stored, nothing is displayed
       let firstRow =                  // first row must be created different than the other ones
       `                                                              
           <div class="list-value-date">
@@ -43,8 +43,8 @@ function showEntries(entries) {
       entryLi.innerHTML = firstRow
       appendById("entries", entryLi);
       
-      for (let i = 0; i < entries.length; i++) { // create list entry for every count in count array
-          let countHtmlContent = `  
+      for (let i = 0; i < entries.length; i++) { // create list entry for every entry in entries array
+          let entryHtmlContent = `  
           <div class="list-value-date">
               <img src="img/calendar.png"/>
               <p>${formatDate(entries[i].date)}</p>
@@ -60,12 +60,12 @@ function showEntries(entries) {
           </div>
           </div>
           <div class="list-value-delete">
-              <img src="img/delete.png" onclick="deleteCount('${entries[i].id}')"/>
+              <img src="img/delete.png" onclick="deleteEntry('${entries[i].id}')"/>
           </div>
       `;
 
           entryLi = document.createElement("li");
-          entryLi.innerHTML = countHtmlContent
+          entryLi.innerHTML = entryHtmlContent
           appendById("entries", entryLi);
       }}
   else {
@@ -86,41 +86,41 @@ function appendById(id, elementToAppend) {
   }}
 
 /**
-* Delete the count with the given ID.
+* Delete the entry with the given ID.
 *
-* @param id The ID of the count to delete.
+* @param id The ID of the entry to delete.
 */
-function deleteCount(id) {
-  console.debug(`Attempting to delete count with ID: ${id}`);
-  let counts = loadStoredCounts();
-  if (counts && id) {
-      for (let i = 0; i < counts.length; i++) {
-          if (counts[i].id == id) {
-              counts.splice(i, 1);
-              storeCounts(counts);
-              cleanCountList();
-              showCounts(counts);
+function deleteEntry(id) {
+  console.debug(`Attempting to delete entry with ID: ${id}`);
+  let entries = loadStoredEntries();
+  if (entries && id) {
+      for (let i = 0; i < entries.length; i++) {
+          if (entries[i].id == id) {
+              entries.splice(i, 1);
+              storeEntries(entries);
+              cleanEntryList();
+              showEntries(entries);
 
-              console.info(`Deleted count with ID: ${id}`);
+              console.info(`Deleted entry with ID: ${id}`);
 
               break;
           }
       }
   } else {
-      console.error("Invalid arguments to remove count");
+      console.error("Invalid arguments to remove entry");
   }
 }
 
 /**
-* Remove all counts from the count list.
+* Remove all entries from the entry list.
 */
-function cleanCountList() {
-  let countList = document.getElementById("counts");
-  if (countList) {
-      countList.innerHTML = "";
-      console.debug("Cleared count list");
+function cleanEntryList() {
+  let EntryList = document.getElementById("entries");
+  if (EntryList) {
+      entryList.innerHTML = "";
+      console.debug("Cleared entry list");
   } else {
-      console.error("count list not found");
+      console.error("entry list not found");
   }
 }
 
@@ -150,11 +150,11 @@ function formatDate(date) {
 /**
 * Calculate the difference between the array values and create the period.
 * @param i Index of the current Array item.
-* @param counts Array of Counts.
+* @param entries Array of Entries.
 * @returns The formatted HTML content for the difference column in the "Zaehlerstaende verwalten"-list.
 */
-function CalculateDiff(i, counts) {
-  if (i == counts.length - 1) {
+function CalculateDiff(i, entries) {
+  if (i == entries.length - 1) {
       return "";
   } else {
       return `<div>
@@ -162,10 +162,10 @@ function CalculateDiff(i, counts) {
               </div>
               <div> 
                   <p class="list-value-diff-kWh">
-                      ${String((counts[i].value - counts[i + 1].value).toFixed(2)).replace(".",",")} kWh
+                      ${String((entries[i].value - entries[i + 1].value).toFixed(2)).replace(".",",")} kWh
                   </p> 
                   <p class="list-value-diff-period">
-                  ${formatDate(counts[i+1].date)}-${formatDate(counts[i].date)}
+                  ${formatDate(entries[i+1].date)}-${formatDate(entries[i].date)}
                   </p>
               </div>`;
       }

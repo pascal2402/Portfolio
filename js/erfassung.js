@@ -33,8 +33,8 @@ function getInputObject() {
 /**
 * Insert into a sorted array while keeping the sorting.
 * 
-* @param counts The counts array.
-* @param count The count object which should be inserted into the array.
+* @param counts The entries array.
+* @param count The entry object which should be inserted into the array.
 */
 function insertSorted(entries, entry) {
   if (entries.length == 0){ 
