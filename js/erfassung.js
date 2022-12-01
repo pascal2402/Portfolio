@@ -4,12 +4,12 @@
    * @param id The ID of the count, if a count should be updated.
    */
  function save() {
-  let counts = loadStoredCounts();
-  const count = getInputObject();
-  console.log(count);
-  insertSorted(counts, count)
-  storeCounts(counts);
-  console.debug('Count saved');
+  let entries = loadStoredEntries();
+  const entry = getInputObject();
+  console.log(entry);
+  insertSorted(entries, entry)
+  storeCounts(entries);
+  console.debug('Entry saved');
 }
 
 /**
@@ -36,21 +36,21 @@ function getInputObject() {
 * @param counts The counts array.
 * @param count The count object which should be inserted into the array.
 */
-function insertSorted(counts, count) {
-  if (counts.length == 0){ 
-    counts.push(count);
+function insertSorted(entries, entry) {
+  if (entries.length == 0){ 
+    entries.push(count);
   }
   else {
     let i = 0;
-    while (i < counts.length && counts[i].date > count.date){ // search for place to insert
+    while (i < entries.length && entries[i].date > entry.date){ // search for place to insert
       i+=1
     }
     let insert_at = i;
-    i = counts.length;
+    i = entries.length;
     while (i > insert_at){ // shift counts behind place to insert up (create space for the count that shall be inserted)
-      counts[i] = counts[i-1];
+      entries[i] = entries[i-1];
       i-=1
     }
-    counts[insert_at] = count; // insert count into list at the right place
+    entries[insert_at] = entry; // insert count into list at the right place
   }
 }
