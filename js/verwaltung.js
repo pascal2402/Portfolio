@@ -36,7 +36,7 @@ function showEntries(entries) {
             </p>
           </div>
           </div>
-          <div class="list-value-delete">
+          <div class="entry-delete">
           </div>
       `
       let entryLi = document.createElement("li");
@@ -59,7 +59,7 @@ function showEntries(entries) {
               ${CalculateDiff(i, entries)}
           </div>
           </div>
-          <div class="list-value-delete">
+          <div class="entry-delete">
               <img src="img/delete.png" onclick="deleteEntry('${entries[i].id}')"/>
           </div>
       `;
