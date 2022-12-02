@@ -3,20 +3,20 @@
 }
 
 .list-entries li:nth-child(odd) {
-  background-color: lightgray;
+  background-color: #E6E6E6;
 }
 
 .list-entries li:first-of-type{
   background-color: #EA1F25;
   color: white;
 }
+
 .list-entries li {
   display: flex;
-  padding: 20px 0;
 }
 
 .list-entries img {
-  width: 50px;
+  width: 60px;
   height: 100%;
 }
 
@@ -35,7 +35,7 @@
   display: flex;
   margin:auto;
   font-weight: bold;
-  justify-content: center;
+  margin-left:30px;
 }
 
 .entry-count {

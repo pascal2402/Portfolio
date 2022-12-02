@@ -52,9 +52,14 @@ input {
   display: flex;
   text-align: left;
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 .headline-erfassung *{
   margin-top: auto;
   margin-bottom: auto;
+}
+
+form{
+  margin-left:30px;
 }

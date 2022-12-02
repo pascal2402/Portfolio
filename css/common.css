@@ -21,6 +21,10 @@ footer {
   margin:auto;
 }
 
+.copyright p{
+  text-align:center;
+  font-size: 0.8rem;
+}
 .footer-nav {
   text-align: right;
 }
@@ -57,19 +61,20 @@ header {
 header a, header a img {
   height: auto;
   width: 250px;
-  margin-top: auto
+  margin-top: auto;
+  margin-left: 15px;
 }
 
 header nav {
-  /* Let navigation take the remaining size in this row */
   flex-grow: 1;
-  /* Align navigation items on the right side */
   text-align: right;
   margin: auto;
+  font-weight:bold;
+  margin-right: 50px;
 }
 
 header nav a {
-  margin: 0 20px;
+  margin: 0 10px;
 }
 
 header nav a:visited, header nav a:link, header nav a:hover {
@@ -89,6 +94,7 @@ body {
 .headline {
   display: flex;
   text-align: left;
+  margin-left: 30px;
 }
 
 .headline * {
@@ -112,7 +118,7 @@ h1 {
 
 h2 {
   font-size: 1.3rem;
-  /*margin-top: 40px;*/
+  margin-left: 30px;
 }
 
 button {
@@ -130,4 +136,8 @@ button:hover {
   border: solid;
   border-color: black;
   border-width: 2px;
+}
+
+p {
+  margin-left: 30px;
 }
