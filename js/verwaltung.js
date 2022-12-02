@@ -9,7 +9,7 @@
 /**
 * Display the given entries in the entry list.
 *
-* @param entries The entries to show in the entry list.
+* @param entries The entries to show from the list.
 */
 function showEntries(entries) {
   if (entries && entries.length !==0) { // if no entries are stored, nothing is displayed
@@ -150,7 +150,7 @@ function formatDate(date) {
 
 /**
 * Calculate the difference between the array values and create the period.
-* @param i Index of the current Array item.
+* @param i Index of the current Array element.
 * @param entries Array of Entries.
 * @returns The formatted HTML content for the calculated column in the list.
 */

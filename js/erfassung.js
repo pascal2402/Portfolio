@@ -16,7 +16,7 @@
  * Search for an HTML input element by its ID and return the value.
  *
  * @param id The ID of the HTML input element.
- * @returns {undefined|*} The value of the HTML input element, if one with the given ID exists.
+ * @returns {undefined|*} The value of the HTML input element found by its id.
  */
 function getInputObject() {
   const id = new Date().getTime();
@@ -42,15 +42,15 @@ function insertSorted(entries, entry) {
   }
   else {
     let i = 0;
-    while (i < entries.length && entries[i].date > entry.date){ // search for place to insert
+    while (i < entries.length && entries[i].date > entry.date){ // find index to insert
       i+=1
     }
     let insert_at = i;
     i = entries.length;
-    while (i > insert_at){ // shift counts behind place to insert up (create space for the count that shall be inserted)
+    while (i > insert_at){ // shift elements behind index to insert (create space for the entry that shall be inserted)
       entries[i] = entries[i-1];
       i-=1
     }
-    entries[insert_at] = entry; // insert count into list at the right place
+    entries[insert_at] = entry; // insert into array at the right place
   }
 }
