@@ -117,7 +117,7 @@ function deleteEntry(id) {
 function cleanEntryList() {
   let EntryList = document.getElementById("entries");
   if (EntryList) {
-      entryList.innerHTML = "";
+      EntryList.innerHTML = "";
       console.debug("Cleared entry list");
   } else {
       console.error("entry list not found");
