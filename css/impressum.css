@@ -1,8 +1,7 @@
 .highlight {
   font-weight: bold;
   margin: 0px;
-  margin-left: 30px;
 }
-.highlight *{
+.indent {
   margin-left: 30px;
 }
