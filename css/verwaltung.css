@@ -2,7 +2,7 @@
   padding: 0;
 }
 
-.list-entries li:nth-child(odd) {
+.list-entries li:nth-child(even) {
   background-color: lightgray;
 }
 
