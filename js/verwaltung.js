@@ -13,7 +13,7 @@
 */
 function showEntries(entries) {
   if (entries && entries.length !==0) { // if no entries are stored, nothing is displayed
-      let firstRow =                  // first row must be created different than the other ones
+      let firstRow =                  // first row is different to the others
       `                                                              
           <div class="entry-date">
           </div>
@@ -43,7 +43,7 @@ function showEntries(entries) {
       entryLi.innerHTML = firstRow
       appendById("entries", entryLi);
       
-      for (let i = 0; i < entries.length; i++) { // create list entry for every entry in entries array
+      for (let i = 0; i < entries.length; i++) { 
           let entryHtmlContent = `  
           <div class="entry-date">
               <img src="img/calendar.png"/>
@@ -86,7 +86,7 @@ function appendById(id, elementToAppend) {
   }}
 
 /**
-* Delete the entry with the given ID.
+* Delete the entry with a certain ID.
 *
 * @param id The ID of the entry to delete.
 */
@@ -131,7 +131,7 @@ function cleanEntryList() {
 * @returns {string} The formatted date.
 */
 function formatDate(date) {
-  date = new Date(date); // didn't work without creating new date
+  date = new Date(date); 
   let year = date.getFullYear();
   let month = date.getMonth() + 1;
   let day = date.getDate();
@@ -147,11 +147,12 @@ function formatDate(date) {
   console.debug(`Formatted date is: ${formattedDate}`);
   return formattedDate;}
 
+
 /**
 * Calculate the difference between the array values and create the period.
 * @param i Index of the current Array item.
 * @param entries Array of Entries.
-* @returns The formatted HTML content for the difference column in the "Zaehlerstaende verwalten"-list.
+* @returns The formatted HTML content for the calculated column in the list.
 */
 function CalculateDiff(i, entries) {
   if (i == entries.length - 1) {
