@@ -28,10 +28,10 @@ function showEntries(entries) {
             <img src="img/energy-consumption_light.png"/>
           </div>
           <div>
-            <p class="list-value-diff-kWh">
+            <p class="entry-calc-kWh">
             ${String((entries[0].value - entries[entries.length-1].value).toFixed(2)).replace(".", ",")} kWh
             </p>
-            <p class="list-value-diff-period">
+            <p class="entry-calc-period">
             ${formatDate(entries[entries.length-1].date)}-${formatDate(entries[0].date)}
             </p>
           </div>
@@ -161,10 +161,10 @@ function CalculateDiff(i, entries) {
                   <img src="img/energy-consumption_dark.png"/>
               </div>
               <div> 
-                  <p class="list-value-diff-kWh">
+                  <p class="entry-calc-kWh">
                       ${String((entries[i].value - entries[i + 1].value).toFixed(2)).replace(".",",")} kWh
                   </p> 
-                  <p class="list-value-diff-period">
+                  <p class="entry-calc-period">
                   ${formatDate(entries[i+1].date)}-${formatDate(entries[i].date)}
                   </p>
               </div>`;

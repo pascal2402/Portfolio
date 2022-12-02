@@ -33,7 +33,7 @@
 .entry-date {
   width: 25%;
   display: flex;
-  margin: auto;
+  margin:auto;
   font-weight: bold;
   justify-content: center;
 }
@@ -81,10 +81,10 @@
 }
 
 
-.list-value-kWh{
+.entry-calc-kWh{
   font-weight: bold;
 }
-.list-value-period{
+.entry-calc-period{
   font-style: italic;
 }
 
