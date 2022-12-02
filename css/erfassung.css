@@ -25,6 +25,7 @@ input {
   display:flex;
   justify-content: center;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 #cancel-btn, #save-btn{
@@ -45,4 +46,15 @@ input {
     border: solid;
     border-color: black;
     border-width: 2px;
+}
+
+.headline-erfassung{
+  display: flex;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.headline-erfassung *{
+  margin-top: auto;
+  margin-bottom: auto;
 }
