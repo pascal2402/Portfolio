@@ -118,13 +118,6 @@ h1 {
 
 h2 {
   font-size: 1.3rem;
-  margin-left: 30px;
-}
-h3{
-  margin-left: 30px;
-}
-h4{
-  margin-left: 30px;
 }
 
 button {
@@ -144,6 +137,6 @@ button:hover {
   border-width: 2px;
 }
 
-p {
+.indent {
   margin-left: 30px;
 }
