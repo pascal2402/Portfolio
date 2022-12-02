@@ -30,7 +30,7 @@
   margin-bottom: auto;
 }
 
-.list-value-date {
+.entry-date {
   width: 25%;
   display: flex;
   margin: auto;
@@ -38,7 +38,7 @@
   justify-content: center;
 }
 
-.list-value-counterstatus {
+.entry-count {
   width: 25%;
   display: grid;
   margin: auto;
@@ -61,15 +61,15 @@
   margin: auto;
 }
 
-.list-value-date img, 
-.list-value-date p{
+.entry-date img, 
+.entry-date p{
   margin-top: auto;
   margin-bottom: auto;
   text-align: left;
   padding: 0 10px;
 }
-.list-value-counterstatus img,
-.list-value-counterstatus p{
+.entry-count img,
+.entry-count p{
   margin-top: auto;
   margin-bottom: auto;
   text-align: left;

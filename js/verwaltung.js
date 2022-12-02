@@ -15,9 +15,9 @@ function showEntries(entries) {
   if (entries && entries.length !==0) { // if no entries are stored, nothing is displayed
       let firstRow =                  // first row must be created different than the other ones
       `                                                              
-          <div class="list-value-date">
+          <div class="entry-date">
           </div>
-          <div class="list-value-counterstatus">
+          <div class="entry-count">
           <div>
               <img src="img/counter_light.png"/>
           </div>
@@ -45,11 +45,11 @@ function showEntries(entries) {
       
       for (let i = 0; i < entries.length; i++) { // create list entry for every entry in entries array
           let entryHtmlContent = `  
-          <div class="list-value-date">
+          <div class="entry-date">
               <img src="img/calendar.png"/>
               <p>${formatDate(entries[i].date)}</p>
           </div>
-          <div class="list-value-counterstatus">
+          <div class="entry-count">
           <div>
               <img src="img/counter_dark.png"/>
           </div>
