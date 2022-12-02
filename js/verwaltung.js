@@ -23,7 +23,7 @@ function showEntries(entries) {
           </div>
               <p>${String(entries[0].value).replace(".",",")} kWh</p>
           </div>
-          <div class="list-value-diff">
+          <div class="entry-calc">
           <div>
             <img src="img/energy-consumption_light.png"/>
           </div>
@@ -55,7 +55,7 @@ function showEntries(entries) {
           </div>
               <p>${String(entries[i].value).replace(".", ",")} kWh</p>
           </div>
-          <div class="list-value-diff">
+          <div class="entry-calc">
               ${CalculateDiff(i, entries)}
           </div>
           </div>
